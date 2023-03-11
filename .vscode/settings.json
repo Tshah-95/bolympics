@@ -22,7 +22,8 @@
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "[python]": {
     "editor.formatOnType": true
-  }
+  },
+  "files.insertFinalNewline": true
   // "editor.codeActionsOnSave": {
   //     "source.fixAll.eslint": true
   // },
