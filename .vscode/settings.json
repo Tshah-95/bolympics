@@ -1,0 +1,30 @@
+{
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.enableSmartCommit": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.wordWrap": "on",
+  "editor.formatOnType": true,
+  "javascript.suggestionActions.enabled": false,
+  "explorer.autoReveal": false,
+  "editor.stickyTabStops": true,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "javascript.format.semicolons": "insert",
+  "typescript.format.semicolons": "insert",
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "editor.formatOnSave": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "editor.fontSize": 20,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "[python]": {
+    "editor.formatOnType": true
+  }
+  // "editor.codeActionsOnSave": {
+  //     "source.fixAll.eslint": true
+  // },
+  // "eslint.validate": ["javascript"]
+}
