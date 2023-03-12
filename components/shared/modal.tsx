@@ -27,13 +27,13 @@ export default function Modal({
         setShowModal(false);
       }
     },
-    [setShowModal],
+    [ setShowModal ],
   );
 
   useEffect(() => {
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
-  }, [onKeyDown]);
+  }, [ onKeyDown ]);
 
   const { isMobile, isDesktop } = useWindowSize();
 
@@ -52,7 +52,7 @@ export default function Modal({
                   initial={{ scale: 0.95 }}
                   animate={{ scale: 1 }}
                   exit={{ scale: 0.95 }}
-                  onMouseDown={(e) => {
+                  onMouseDown={(e: { target: null; }) => {
                     if (desktopModalRef.current === e.target) {
                       setShowModal(false);
                     }
