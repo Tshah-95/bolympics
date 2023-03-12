@@ -1,7 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 
+//why can't i get this to use the TS type??
 declare global {
-  var prisma: PrismaClient | undefined;
+  var prisma: any | undefined;
 }
 
 const prisma = global.prisma || new PrismaClient();

@@ -11,7 +11,7 @@ export default function CountingNumbers({
   start?: number;
   duration?: number;
 }) {
-  const [count, setCount] = useState(start);
+  const [ count, setCount ] = useState(start);
 
   useEffect(() => {
     let startTime: number | undefined;
@@ -28,7 +28,7 @@ export default function CountingNumbers({
       requestAnimationFrame(animateCount);
     };
     requestAnimationFrame(animateCount);
-  }, [value, duration]);
+  }, [ value, duration ]);
 
   return <p className={className}>{Intl.NumberFormat().format(count)}</p>;
 }

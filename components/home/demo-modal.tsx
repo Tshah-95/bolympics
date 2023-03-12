@@ -40,7 +40,7 @@ const DemoModal = ({
 };
 
 export function useDemoModal() {
-  const [showDemoModal, setShowDemoModal] = useState(false);
+  const [ showDemoModal, setShowDemoModal ] = useState(false);
 
   const DemoModalCallback = useCallback(() => {
     return (
@@ -49,10 +49,10 @@ export function useDemoModal() {
         setShowDemoModal={setShowDemoModal}
       />
     );
-  }, [showDemoModal, setShowDemoModal]);
+  }, [ showDemoModal, setShowDemoModal ]);
 
   return useMemo(
     () => ({ setShowDemoModal, DemoModal: DemoModalCallback }),
-    [setShowDemoModal, DemoModalCallback],
+    [ setShowDemoModal, DemoModalCallback ],
   );
 }

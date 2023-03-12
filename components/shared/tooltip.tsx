@@ -13,7 +13,7 @@ export default function Tooltip({
   content: ReactNode | string;
   fullWidth?: boolean;
 }) {
-  const [openTooltip, setOpenTooltip] = useState(false);
+  const [ openTooltip, setOpenTooltip ] = useState(false);
 
   const { isMobile, isDesktop } = useWindowSize();
 
