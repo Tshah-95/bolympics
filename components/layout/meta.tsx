@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const DOMAIN = "https://precedent.dev";
+const DOMAIN = "https://bolympics.vercel.app";
 
 export default function Meta({
   title = "bolympics - beer olympics. simplified.",

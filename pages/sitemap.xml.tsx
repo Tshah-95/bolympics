@@ -13,14 +13,14 @@ function generateSiteMap({
          <loc>${hostname}</loc>
        </url>
        ${users
-         .map((username) => {
-           return `
+      .map((username) => {
+        return `
          <url>
              <loc>${`${hostname}/${username}`}</loc>
          </url>
        `;
-         })
-         .join("")}
+      })
+      .join("")}
      </urlset>
    `;
 }
@@ -36,7 +36,7 @@ export async function getServerSideProps({
   req: NextApiRequest;
   res: NextApiResponse;
 }) {
-  const hostname = `https://precedent.dev`;
+  const hostname = `https://bolympics.vercel.app`;
 
   // Generate dynamic data for the sitemap
   //   const users = await prisma.user.findMany({
