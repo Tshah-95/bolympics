@@ -10,10 +10,19 @@ module.exports = {
     hoverOnlyWhenSupported: true,
   },
   theme: {
+    screens: {
+      '2xs': '320px',
+      'xs': '480px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       fontFamily: {
-        display: ["var(--font-sf)", "system-ui", "sans-serif"],
-        default: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: [ "var(--font-sf)", "system-ui", "sans-serif" ],
+        default: [ "var(--font-inter)", "system-ui", "sans-serif" ],
       },
       animation: {
         // Tooltip

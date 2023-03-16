@@ -44,7 +44,7 @@ export default function Layout({
               height="30"
               className="mr-2 rounded-sm"
             ></Image>
-            <p>Bolympics</p>
+            <p>bolympics</p>
           </Link>
           <div>
             <AnimatePresence>

@@ -3,8 +3,8 @@ import Head from "next/head";
 const DOMAIN = "https://precedent.dev";
 
 export default function Meta({
-  title = "Bolympics - Here To Make Hosting As Fun As Attending",
-  description = "Bolympics is the one stop shop for setting up your next Beer Olympics. From organizing teams to scheduling events to payments, we've got you covered.",
+  title = "bolympics - beer olympics. simplified.",
+  description = "The one stop shop for setting up your next beer olympics. Organize, schedule, and get paid all in one place",
   image = `${DOMAIN}/api/og`,
 }: {
   title?: string;

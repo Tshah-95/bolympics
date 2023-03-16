@@ -27,17 +27,17 @@ export default function Home() {
         }}
       >
         <motion.h1
-          className="bg-gradient-to-br from-orange-400 via-red-500 to-stone-500 bg-clip-text text-center font-display text-4xl font-bold text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
+          className="bg-gradient-to-br from-orange-400 via-red-500 to-stone-500 bg-clip-text text-center font-display text-4xl font-bold text-transparent drop-shadow-sm 2xs:text-5xl sm:text-6xl md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <Balancer>Here To Make Hosting As Fun As Attending</Balancer>
+          <Balancer>beer olympics. simplified.</Balancer>
         </motion.h1>
         <motion.p
           className="mt-6 text-center text-gray-500 md:text-xl"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <Balancer>
-            {"Throwing a beer olympics shouldn't take hours of coordination. Let us simplify the process"}
+            {"Beer olympics shouldn't take weeks of coordination. Let us simplify the process"}
           </Balancer>
         </motion.p>
         <motion.div
