@@ -3,7 +3,6 @@ import Layout from "@/components/layout";
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
 import { DEPLOY_URL, FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
-import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
@@ -40,50 +39,15 @@ export default function Home() {
             {"Beer olympics shouldn't take weeks of coordination. Let us simplify the process"}
           </Balancer>
         </motion.p>
-        <motion.div
-          className="mx-auto mt-6 flex items-center justify-center space-x-5"
-          variants={FADE_DOWN_ANIMATION_VARIANTS}
-        >
-          <a
-            className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"
-            href={DEPLOY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              className="h-4 w-4 group-hover:text-black"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 4L20 20H4L12 4Z"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <p>Deploy</p>
-          </a>
-          <a
-            className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
-            href="https://github.com/steven-tey/precedent"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Github />
-            <p>Star</p>
-          </a>
-        </motion.div>
       </motion.div>
       {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */}
-      <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo, large }) => (
+      <div className="my-10 grid w-full animate-[slide-down-fade_0.5s_ease-in-out] max-w-screen-xl grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
+        {features.map(({ title, description, demo, large }, index) => (
           <Card
             key={title}
             title={title}
             description={description}
+            index={index}
             demo={
               title === "Beautiful, reusable components" ? (
                 <ComponentGrid />

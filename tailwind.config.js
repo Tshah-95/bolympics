@@ -28,6 +28,7 @@ module.exports = {
         // Tooltip
         "slide-up-fade": "slide-up-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
         "slide-down-fade": "slide-down-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-down-fade": "scale-in-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
       },
       keyframes: {
         // Tooltip
@@ -39,6 +40,10 @@ module.exports = {
           "0%": { opacity: 0, transform: "translateY(-6px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
+        "scale-in-fade": {
+          "0%": { opacity: 0, transform: "scale(0.6) translateY(- 8px)" },
+          "100%": { opacity: 1 }
+        }
       },
     },
   },
