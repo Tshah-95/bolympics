@@ -1,21 +1,11 @@
-import Card from "@/components/home/card";
 import Layout from "@/components/layout";
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
-import WebVitals from "@/components/home/web-vitals";
-import ComponentGrid from "@/components/home/component-grid";
-import Image from "next/image";
 
 
 
 export default function Dashboard() {
-  const cards = [ "hello", "blop", "asdfasdf", "12joisdkfjkj" ].map((key) => {
-    console.log(key);
-    return (
-      <div key={ key } className={ `relative col-span-1 h-96 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md animate-[scale-in-fade_1s_ease-in-out_forwards]` } />
-    );
-  });
   return (
     <Layout>
       <motion.div
@@ -49,8 +39,8 @@ export default function Dashboard() {
         </motion.p>
       </motion.div>
       {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */ }
-      <div className="my-10 grid w-full max-w-screen-xl grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        { cards }
+      <div className="my-10 grid w-full max-w-screen-xl grid-cols-1 gap-5 px-5 md:grid-cols-2 lg:grid-cols-3 xl:px-0 animate-[scale-in-fade_1s_ease-in-out]">
+        { [ ...Array(10).keys() ].map((key) => (<div key={ key } className={ `relative col-span-1 h-96 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md` } />)) }
       </div>
     </Layout>
   );
