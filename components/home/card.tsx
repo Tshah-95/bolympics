@@ -6,13 +6,11 @@ export default function Card({
   title,
   description,
   demo,
-  index,
   large,
 }: {
   title: string;
   description: string;
   demo: ReactNode;
-  index: number;
   large?: boolean;
 }) {
   return (

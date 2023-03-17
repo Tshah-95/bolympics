@@ -42,12 +42,11 @@ export default function Home() {
       </motion.div>
       {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */}
       <div className="my-10 grid w-full animate-[slide-down-fade_0.5s_ease-in-out] max-w-screen-xl grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo, large }, index) => (
+        {features.map(({ title, description, demo, large }) => (
           <Card
             key={title}
             title={title}
             description={description}
-            index={index}
             demo={
               title === "Beautiful, reusable components" ? (
                 <ComponentGrid />
