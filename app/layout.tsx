@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cx(sfPro.variable, inter.variable)}>{children}</body>
+      <body className={cx(sfPro.variable, inter.variable, "bg-slate-800 text-white")}>{children}</body>
     </html>
   );
 }
