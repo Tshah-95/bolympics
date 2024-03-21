@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import cx from "classnames";
+import { sfPro, inter } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cx(sfPro.variable, inter.variable)}>{children}</body>
     </html>
   );
 }
