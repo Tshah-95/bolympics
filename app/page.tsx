@@ -3,6 +3,7 @@ import Balancer from "react-wrap-balancer";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 import { SplashSection } from "./components/splash";
+import { signIn } from "next-auth/react";
 
 const descriptors = ["easy", "fast", "fun"];
 
@@ -55,6 +56,7 @@ export default function Home() {
           </p>
           <button
             type="button"
+            onClick={() => signIn("google")}
             className="rounded bg-slate-700 px-8 py-4 mt-10 text-xs md:text-md font-semibold text-white shadow-md hover:bg-slate-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-700"
           >
             Get started now
