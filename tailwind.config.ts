@@ -22,11 +22,12 @@ const config: Config = {
     },
     extend: {
       animation: {
-        "slide-down-fade": "slide-down-fade 1.8s cubic-bezier(0.16, 1, 0.3, 1)",
+        "slide-down-fade":
+          "slide-down-fade 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both",
         "slide-down-fade-2":
-          "slide-down-fade 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both",
+          "slide-down-fade 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both",
         "slide-down-fade-3":
-          "slide-down-fade 1.8s cubic-bezier(0.16, 1, 0.3, 1) 1s both",
+          "slide-down-fade 1.8s cubic-bezier(0.16, 1, 0.3, 1) 1.3s both",
         "slide-up-fade": "slide-up-fade 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
       },
       flex: {

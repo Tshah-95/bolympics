@@ -10,9 +10,8 @@ export default function NavBar() {
   return (
     <>
       <div
-        className={`fixed top-0 w-full flex justify-center ${
-          scrolled ? " bg-slate-700/30 backdrop-blur-xl" : "bg-slate-600/0"
-        } z-30 transition-all`}
+        className="fixed top-0 w-full flex justify-center data-[scrolled=true]:bg-slate-700/30 data-[scrolled=true]:backdrop-blur-xl data-[scrolled=false]:bg-slate-600/0 z-30 transition-all"
+        data-scrolled={scrolled}
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-center w-full">
           <Link
