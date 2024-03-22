@@ -4,7 +4,7 @@ import cx from "classnames";
 import { sfPro, inter } from "./fonts";
 import { Suspense } from "react";
 import Nav from "./components/nav";
-import NavBarEmpty from "./components/navbar-empty";
+import { SessionWrapper } from "../lib/wrappers/session";
 
 export const metadata: Metadata = {
   title: "bolympics",
@@ -28,7 +28,7 @@ export default function RootLayout({
         <Suspense fallback="">
           <Nav />
         </Suspense>
-        {children}
+        <SessionWrapper>{children}</SessionWrapper>
       </body>
     </html>
   );
