@@ -1,8 +1,7 @@
 "use client";
 import Balancer from "react-wrap-balancer";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
-import { ReactNode, useEffect, useState } from "react";
-import { CheckBadge } from "./components/check-badge";
+import { useEffect, useState } from "react";
 import { SplashSection } from "./components/splash";
 
 const descriptors = ["easy", "fast", "fun"];
@@ -56,7 +55,7 @@ export default function Home() {
           </p>
           <button
             type="button"
-            className="rounded bg-slate-700 px-8 py-4 mt-10 text-xs md:text-md active:scale-[98%] font-semibold text-white shadow-md hover:bg-slate-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-700"
+            className="rounded bg-slate-700 px-8 py-4 mt-10 text-xs md:text-md font-semibold text-white shadow-md hover:bg-slate-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-700"
           >
             Get started now
           </button>

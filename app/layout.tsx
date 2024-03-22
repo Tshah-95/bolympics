@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import cx from "classnames";
 import { sfPro, inter } from "./fonts";
-import NavBar from "./components/navbar";
+import { Suspense } from "react";
+import Nav from "./components/nav";
+import NavBarEmpty from "./components/navbar-empty";
 
 export const metadata: Metadata = {
   title: "bolympics",
@@ -23,7 +25,9 @@ export default function RootLayout({
           "bg-slate-800 text-white flex flex-col pt-16"
         )}
       >
-        <NavBar />
+        <Suspense fallback="">
+          <Nav />
+        </Suspense>
         {children}
       </body>
     </html>
