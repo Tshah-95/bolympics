@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <main className="flex h-full flex-col items-center gap-10 p-5 md:p-10">
-      <div className="flex animate-slide-down-fade max-w-5xl w-full p-3 pt-20 pb-10 items-center justify-between font-mono text-sm rounded-lg bg-gradient-to-br from-orange-500 via-red-500 to-orange-400 shadow-md">
+      <div className="flex animate-slide-down-fade max-w-5xl w-full p-3 pt-20 pb-10 items-center justify-between font-mono text-sm rounded-lg bg-gradient-to-br from-red-500 to-orange-400 shadow-md">
         <div className="flex flex-col w-full justify-center items-center">
           <h1 className="flex flex-col items-center font-display text-center bg-gradient-to-br from-slate-800 to-slate-600 bg-clip-text text-transparent  text-5xl font-bold drop-shadow-sm sm:text-6xl md:text-7xl md:leading-[5rem]">
             <p>beer olympics.</p>
