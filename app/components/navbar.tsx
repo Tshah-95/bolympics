@@ -43,7 +43,7 @@ export default function NavBar({ session }: { session: Session | null }) {
                 className="flex items-center justify-center h-full relative"
                 onClick={() => signOut({ callbackUrl: "/" })}
               >
-                Sign Out
+                sign out
               </button>
             ) : (
               <Link href="/dashboard">Dashboard</Link>
@@ -53,7 +53,7 @@ export default function NavBar({ session }: { session: Session | null }) {
               className="font-medium"
               onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
             >
-              Sign In
+              sign in
             </button>
           )}
         </div>

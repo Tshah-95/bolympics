@@ -22,7 +22,7 @@ export default function RootLayout({
         className={cx(
           sfPro.variable,
           inter.variable,
-          "bg-slate-800 text-white flex flex-col pt-16"
+          "bg-slate-800 text-white flex flex-col pt-16 min-h-[100vh] w-full"
         )}
       >
         <Suspense fallback="">
