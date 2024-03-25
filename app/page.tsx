@@ -35,10 +35,10 @@ export default function Splash() {
   const promptX = useTransform(progress, [0, 0.5, 0.5, 1], [0, -20, 20, 0]);
 
   return (
-    <main className="flex h-full flex-col items-center gap-10 p-5 md:p-10">
-      <div className="flex animate-slide-down-fade max-w-5xl w-full p-3 pt-20 pb-10 shadow-md-white items-center justify-between text-sm rounded-lg bg-gradient-to-br from-red-500 to-orange-400">
+    <>
+      <div className="flex animate-slide-down-fade w-full p-3 pt-20 pb-10 shadow-md-white items-center justify-between text-sm rounded-lg bg-gradient-to-br from-red-500 to-orange-400">
         <div className="flex flex-col w-full justify-center items-center">
-          <h1 className="flex flex-col items-center font-display text-center bg-gradient-to-br from-slate-900 to-slate-700 from-50% to-100% bg-clip-text text-transparent  text-5xl font-bold drop-shadow-lg sm:text-6xl md:text-7xl md:leading-[5rem]">
+          <h1 className="flex flex-col items-center font-display text-center bg-gradient-to-br from-slate-900 to-slate-700 from-50% to-100% bg-clip-text text-transparent  text-5xl font-bold drop-shadow-sm sm:text-6xl md:text-7xl md:leading-[5rem]">
             <p>beer olympics</p>
             <p className="flex justify-center gap-3 sm:gap-4 md:gap-5">
               made
@@ -97,6 +97,6 @@ export default function Splash() {
           "Opt-in for text notifications",
         ]}
       />
-    </main>
+    </>
   );
 }

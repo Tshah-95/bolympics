@@ -28,7 +28,11 @@ export default function RootLayout({
         <Suspense fallback="">
           <Nav />
         </Suspense>
-        <SessionWrapper>{children}</SessionWrapper>
+        <SessionWrapper>
+          <main className="flex flex-1 flex-col items-center gap-10 p-5 md:p-10 max-w-5xl w-full">
+            {children}
+          </main>
+        </SessionWrapper>
       </body>
     </html>
   );
