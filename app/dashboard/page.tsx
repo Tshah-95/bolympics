@@ -3,6 +3,7 @@
 import { AuthWrapper } from "@/lib/wrappers/authenticated";
 import Balancer from "react-wrap-balancer";
 import { PlusIcon, CalendarDaysIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 export default function Dashboard() {
   return (
@@ -22,13 +23,15 @@ export default function Dashboard() {
               Or just check out some of our templates{" "}
               <span className="text-blue-400">here.</span>
             </Balancer>
-            <button
-              type="button"
-              className="mt-10 md:mt-16 bg-gradient-to-br flex items-center gap-3 from-red-500 to-orange-400 hover:brightness-90 text-md py-3 px-5 md:text-lg font-medium md:py-4 md:px-6 rounded-lg"
-            >
-              <PlusIcon className="w-5 h-5 md:w-6 md:h-6" />
-              Create New
-            </button>
+            <Link href="/event/create" passHref>
+              <button
+                type="button"
+                className="mt-10 md:mt-16 bg-gradient-to-br flex items-center gap-3 from-red-500 to-orange-400 hover:brightness-90 text-md py-3 px-5 md:text-lg font-medium md:py-4 md:px-6 rounded-lg"
+              >
+                <PlusIcon className="w-5 h-5 md:w-6 md:h-6" />
+                Create New
+              </button>
+            </Link>
           </div>
         </div>
       </>
