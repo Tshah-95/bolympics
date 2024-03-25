@@ -5,6 +5,7 @@ import { sfPro, inter } from "./fonts";
 import { Suspense } from "react";
 import Nav from "./components/nav";
 import { SessionWrapper } from "../lib/wrappers/session";
+import "react-datepicker/dist/react-datepicker.css";
 
 export const metadata: Metadata = {
   title: "bolympics",

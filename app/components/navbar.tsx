@@ -1,6 +1,7 @@
 "use client";
 
 import useScroll from "@/lib/hooks/use-scroll";
+import { HomeIcon, HomeModernIcon } from "@heroicons/react/24/solid";
 import { Session } from "next-auth";
 import { signIn, signOut } from "next-auth/react";
 import Image from "next/image";
@@ -30,7 +31,9 @@ export default function NavBar({ session }: { session: Session | null }) {
               alt="bolympics logo"
               width="150"
               height="30"
+              className="hidden md:block"
             />
+            <HomeIcon className="md:hidden w-6 h-6" />
           </Link>
         </div>
         <div className="flex gap-5 items-center font-medium content-center">
