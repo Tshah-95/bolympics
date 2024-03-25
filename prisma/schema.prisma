@@ -7,9 +7,8 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url = env("DATABASE_URL") // uses connection pooling
+  url = env("DATABASE_URL")
 }
-
 
 model Account {
   id                 String  @id @default(cuid())
@@ -40,6 +39,20 @@ model Session {
   @@index([userId])
 }
 
+model Event {
+  id        String   @id @default(cuid())
+  name      String
+  time      String
+  location  String
+  details   String?
+  photoUrl  String?
+  photoKey  String?
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+
+  @@index([userId])
+}
+
 model User {
   id            String    @id @default(cuid())
   name          String?
@@ -48,6 +61,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  events        Event[]
 }
 
 model VerificationToken {
