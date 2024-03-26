@@ -24,7 +24,7 @@ export default function NavBar({ session }: { session: Session | null }) {
         <div className="flex h-16 items-center justify-center">
           <Link
             href="/dashboard"
-            className="flex items-center font-display text-2xl text-white"
+            className="flex items-center font-display text-2xl text-white hover:brightness-90"
           >
             <Image
               src="/bolympics-title.png"

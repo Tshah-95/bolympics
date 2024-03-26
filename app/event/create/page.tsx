@@ -197,7 +197,7 @@ export default function CreateEvent() {
           </button>
           <button
             type="submit"
-            className="rounded-md bg-gradient-to-br hover:brightness-90 from-red-500 to-orange-400 px-4 py-3 text-sm font-semibold shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
+            className="rounded-md bg-gradient-to-br from-red-500 to-orange-400 px-4 py-3 text-sm font-semibold shadow-sm hover:bg-slate-500"
           >
             Create
           </button>

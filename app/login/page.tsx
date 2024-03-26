@@ -22,7 +22,7 @@ export default function Login() {
         <button
           type="button"
           onClick={() => signIn("google")}
-          className="mt-6 md:mt-10 bg-gradient-to-br flex items-center gap-3 from-slate-500 to-slate-400 hover:brightness-90 text-md py-3 px-5 md:text-lg font-medium md:py-4 md:px-6 rounded-lg"
+          className="mt-6 md:mt-10 bg-gradient-to-br flex items-center gap-3 from-slate-500 to-slate-400 text-md py-3 px-5 md:text-lg font-medium md:py-4 md:px-6 rounded-lg"
         >
           Login Now
         </button>

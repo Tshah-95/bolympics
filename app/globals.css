@@ -20,6 +20,20 @@ button:active {
   transform: scale(0.98);
 }
 
+button:focus-visible {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: white;
+}
+
+button:hover {
+  --tw-brightness: brightness(0.9);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

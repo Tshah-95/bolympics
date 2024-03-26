@@ -7,9 +7,7 @@ import useSWR from "swr";
 
 export default function DashServer() {
   const { data: events, isLoading } = useSWR("events", getEvents);
-  return isLoading ? (
-    <div>wassup son</div>
-  ) : events && events.length > 0 ? (
+  return isLoading ? null : events && events.length > 0 ? (
     <Dashboard events={events} />
   ) : (
     <DashboardEmpty />

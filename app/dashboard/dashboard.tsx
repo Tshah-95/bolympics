@@ -1,36 +1,52 @@
 "use client";
 
-import Balancer from "react-wrap-balancer";
-import { PlusIcon, CalendarDaysIcon } from "@heroicons/react/24/solid";
-import Link from "next/link";
+import { MapPinIcon, ClockIcon, TrashIcon } from "@heroicons/react/24/outline";
 import { Event } from "@prisma/client";
+import Image from "next/image";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { AddressLink } from "../components/address-link";
 
 export default function Dashboard({ events }: { events: Event[] }) {
-  console.log({ events });
   return (
-    <div
-      className="flex animate-slide-down-fade max-w-5xl w-full flex-col data-[empty=true]:flex-1 items-center justify-center"
-      data-empty={true}
-    >
-      <div className="flex flex-col w-full justify-center items-center border-2 bg-slate-700 border-slate-600 py-10 md:py-16 rounded-lg">
-        <CalendarDaysIcon className="w-16 h-16 md:w-24 md:h-24 mb-8 md:mb-12" />
-        <h1 className="flex flex-col items-center font-display text-center bg-gradient-to-br from-blue-100 to-blue-400 from-50% to-100% bg-clip-text text-transparent text-5xl font-bold drop-shadow-xl sm:text-6xl md:text-7xl md:leading-[5rem]">
-          <p>make your</p>
-          <p>first event</p>
-        </h1>
-        <Balancer className="mt-4 md:mt-6 text-center text-md sm:text-lg md:text-xl w-2/3">
-          Or just check out some of our templates{" "}
-          <span className="text-blue-400">here.</span>
-        </Balancer>
-        <Link href="/event/create" passHref>
-          <button
-            type="button"
-            className="mt-10 md:mt-16 bg-gradient-to-br flex items-center gap-3 from-red-500 to-orange-400 hover:brightness-90 text-md py-3 px-5 md:text-lg font-medium md:py-4 md:px-6 rounded-lg"
-          >
-            <PlusIcon className="w-5 h-5 md:w-6 md:h-6" />
-            Create New
-          </button>
-        </Link>
+    <div className="flex animate-slide-down-fade max-w-5xl w-full flex-col items-stretch">
+      <h3 className="font-medium mb-3">Upcoming Events</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5">
+        {events.map((event) => (
+          <div className="flex flex-col h-80 w-full justify-center items-stretch border-[1px] bg-slate-700 border-slate-600 rounded-lg overflow-hidden">
+            <div className="flex flex-1 justify-between bg-slate-500 items-center px-3">
+              <button className="p-2 bg-red-500 shadow-sm rounded-md">
+                <TrashIcon className="w-5 h-5 cursor-pointer" />
+              </button>
+              <h2 className="text-2xl flex-1 text-center font-display overflow-ellipsis">
+                {event.name}
+              </h2>
+              <button className="p-2 shadow-sm rounded-md">
+                <ArrowTopRightOnSquareIcon className="w-6 h-6 cursor-pointer text-white" />
+              </button>
+            </div>
+            <div className="flex flex-2 bg-slate-500 relative">
+              <Image
+                src={
+                  event.photoUrl ??
+                  "https://bolympics-image-store-prod.s3.amazonaws.com/f85b6dc8-0967-4e29-83e2-182772bf659f"
+                }
+                alt="cover-image"
+                fill
+                className="object-contain object-center"
+              />
+            </div>
+            <div className="flex flex-col justify-center items-center gap-2 flex-2">
+              <div className="flex items-center gap-3">
+                <ClockIcon className="w-5 h-5" />
+                <p>{event.time}</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPinIcon className="w-5 h-5" />
+                <AddressLink address={event.location} />
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

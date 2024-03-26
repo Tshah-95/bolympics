@@ -24,7 +24,7 @@ export default function DashboardEmpty() {
           <Link href="/event/create" passHref>
             <button
               type="button"
-              className="mt-10 md:mt-16 bg-gradient-to-br flex items-center gap-3 from-red-500 to-orange-400 hover:brightness-90 text-md py-3 px-5 md:text-lg font-medium md:py-4 md:px-6 rounded-lg"
+              className="mt-10 md:mt-16 bg-gradient-to-br flex items-center gap-3 from-red-500 to-orange-400 text-md py-3 px-5 md:text-lg font-medium md:py-4 md:px-6 rounded-lg"
             >
               <PlusIcon className="w-5 h-5 md:w-6 md:h-6" />
               Create New

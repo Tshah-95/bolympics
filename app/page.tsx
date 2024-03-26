@@ -64,7 +64,7 @@ export default function Splash() {
                 ? router.push("/dashboard")
                 : signIn("google", { callbackUrl: "/dashboard" })
             }
-            className="rounded bg-slate-700 px-8 py-4 mt-10 text-xs md:text-md font-semibold text-white shadow-md hover:bg-slate-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-700"
+            className="rounded-md bg-slate-700 px-8 py-4 mt-10 text-xs md:text-md font-semibold text-white shadow-md hover:bg-slate-600"
           >
             Get started now
           </button>
