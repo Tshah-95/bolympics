@@ -13,11 +13,11 @@ export default function Dashboard({ events }: { events: Event[] }) {
   return (
     <div className="flex animate-slide-down-fade max-w-5xl w-full flex-col items-stretch">
       <h3 className="font-medium mb-3">Upcoming Events</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {events.map((event) => (
           <div
             key={event.id}
-            className="flex flex-col h-80 w-full justify-center items-stretch border-[1px] bg-slate-700 border-slate-600 rounded-lg overflow-hidden"
+            className="flex flex-col h-80 w-full justify-center items-stretch shadow-lg border-[1px] bg-slate-700 border-slate-600 hover:shadow-2xl hover:scale-[1.01] rounded-lg overflow-hidden"
           >
             <div className="flex flex-1 justify-between bg-slate-500 items-center px-3">
               <button
@@ -31,11 +31,11 @@ export default function Dashboard({ events }: { events: Event[] }) {
               <h2 className="text-2xl flex-1 text-center font-display overflow-ellipsis">
                 {event.name}
               </h2>
-              <button className="p-2 shadow-sm rounded-md">
+              <button className="p-2 rounded-md">
                 <ArrowTopRightOnSquareIcon className="w-6 h-6 cursor-pointer text-white" />
               </button>
             </div>
-            <div className="flex flex-2 bg-slate-500 relative">
+            <div className="flex flex-2 bg-gradient-to-b from-slate-500 to-slate-700 from-60% to-100% relative">
               <Image
                 src={
                   event.photoUrl ??
