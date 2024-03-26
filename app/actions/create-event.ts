@@ -46,9 +46,11 @@ export const createEvent = async (formData: FormData) => {
     client.send(command);
   }
 
-  await prisma?.event.create({
+  const event = await prisma?.event.create({
     data: databaseEntry,
   });
+
+  console.log({ event });
 
   permanentRedirect("/dashboard");
 };

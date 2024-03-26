@@ -10,6 +10,7 @@ import { deleteEvent } from "./actions";
 import { mutate } from "swr";
 
 export default function Dashboard({ events }: { events: Event[] }) {
+  console.log({ events });
   return (
     <div className="flex animate-slide-down-fade max-w-5xl w-full flex-col items-stretch">
       <h3 className="font-medium mb-3">Upcoming Events</h3>
@@ -17,9 +18,9 @@ export default function Dashboard({ events }: { events: Event[] }) {
         {events.map((event) => (
           <div
             key={event.id}
-            className="flex flex-col h-80 w-full justify-center items-stretch shadow-lg bg-slate-700 hover:shadow-2xl hover:scale-[1.01] rounded-lg overflow-hidden"
+            className="flex flex-col h-80 w-full justify-center items-stretch shadow-lg bg-slate-700 rounded-lg overflow-hidden"
           >
-            <div className="flex flex-1 justify-between bg-slate-600 items-center px-3">
+            <div className="flex flex-1 justify-between items-center px-3">
               <button
                 className="p-2 bg-red-600 shadow-sm rounded-md"
                 onClick={() =>
@@ -35,7 +36,7 @@ export default function Dashboard({ events }: { events: Event[] }) {
                 <ArrowTopRightOnSquareIcon className="w-6 h-6 cursor-pointer text-white" />
               </button>
             </div>
-            <div className="flex flex-2 bg-gradient-to-b from-slate-600 to-slate-700 relative">
+            {/* <div className="flex flex-2 relative">
               <Image
                 src={
                   event.photoUrl ??
@@ -45,7 +46,7 @@ export default function Dashboard({ events }: { events: Event[] }) {
                 fill
                 className="object-contain object-center"
               />
-            </div>
+            </div> */}
             <div className="flex flex-col justify-center items-center gap-2 flex-2">
               <div className="flex items-center gap-3">
                 <ClockIcon className="w-5 h-5" />
@@ -59,7 +60,7 @@ export default function Dashboard({ events }: { events: Event[] }) {
           </div>
         ))}
         <Link href="/event/create" passHref>
-          <button className="flex flex-col h-80 w-full justify-center items-stretch bg-slate-700 hover:scale-[1.01] active:scale-[.99] rounded-lg overflow-hidden">
+          <button className="flex flex-col h-80 w-full justify-center items-stretch bg-slate-700 hover:scale-[1.01] hover:shadow-2xl active:scale-[.99] rounded-lg overflow-hidden">
             <PlusIcon className=" w-24 h-24 md:w-32 md:h-32 m-auto text-white" />
           </button>
         </Link>

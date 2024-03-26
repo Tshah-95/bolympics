@@ -30,6 +30,7 @@
     "react-dom": "^18",
     "react-google-autocomplete": "^2.7.3",
     "react-wrap-balancer": "^1.1.0",
+    "sharp": "^0.33.3",
     "swr": "^2.2.5",
     "uuid": "^9.0.1"
   },

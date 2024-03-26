@@ -117,67 +117,6 @@ export default function CreateEvent() {
               defaultValue={""}
             />
           </div>
-          <div className="w-full">
-            <div className="flex gap-3">
-              <label
-                htmlFor="cover-photo"
-                className="block text-sm font-medium leading-6 text-white"
-              >
-                Cover Photo
-              </label>
-              <h3 className="text-gray-400 font-medium">(optional)</h3>
-            </div>
-            <div
-              className="mt-2 h-48 flex flex-col items-center justify-center rounded-lg border border-dashed border-white/25 px-6 py-10"
-              style={{
-                backgroundImage: `url(${preview})`,
-                backgroundPosition: "center",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <div className="text-center">
-                {!preview && (
-                  <PhotoIcon
-                    className="mx-auto h-12 w-12 text-gray-500"
-                    aria-hidden="true"
-                  />
-                )}
-                <div
-                  className="mt-4 data-[preview=true]:mt-0 flex text-sm leading-6 text-gray-400"
-                  data-preview={!!preview}
-                >
-                  <label
-                    htmlFor="cover-photo"
-                    className="relative flex items-center data-[preview=true]:gap-2 data-[preview=true]:bg-slate-800/30 data-[preview=true]:p-3 cursor-pointer rounded-md font-semibold text-white focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 focus-within:ring-offset-gray-900 hover:text-blue-500 data-[preview=true]:hover:bg-slate-800 data-[preview=true]:text-white"
-                    data-preview={!!preview}
-                  >
-                    <span>{!preview ? "Upload a file" : "Change image"}</span>
-                    <input
-                      id="cover-photo"
-                      name="cover-photo"
-                      type="file"
-                      accept="image/png, image/jpeg, image/gif"
-                      className="sr-only"
-                      onChange={handleFileChange}
-                    />
-                    {!!preview && (
-                      <PhotoIcon
-                        className="h-5 w-5 text-white"
-                        aria-hidden="true"
-                      />
-                    )}
-                  </label>
-                  {!preview && <p className="pl-1">and preview it here</p>}
-                </div>
-                {!preview && (
-                  <p className="text-xs leading-5 text-gray-400">
-                    PNG, JPG, GIF up to 5MB
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
         </div>
         <input
           type="hidden"
@@ -204,4 +143,68 @@ export default function CreateEvent() {
       </form>
     </AuthWrapper>
   );
+}
+
+{
+  /* <div className="w-full">
+      <div className="flex gap-3">
+        <label
+          htmlFor="cover-photo"
+          className="block text-sm font-medium leading-6 text-white"
+        >
+          Cover Photo
+        </label>
+        <h3 className="text-gray-400 font-medium">(optional)</h3>
+      </div>
+      <div
+        className="mt-2 h-48 flex flex-col items-center justify-center rounded-lg border border-dashed border-white/25 px-6 py-10"
+        style={{
+          backgroundImage: `url(${preview})`,
+          backgroundPosition: "center",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="text-center">
+          {!preview && (
+            <PhotoIcon
+              className="mx-auto h-12 w-12 text-gray-500"
+              aria-hidden="true"
+            />
+          )}
+          <div
+            className="mt-4 data-[preview=true]:mt-0 flex text-sm leading-6 text-gray-400"
+            data-preview={!!preview}
+          >
+            <label
+              htmlFor="cover-photo"
+              className="relative flex items-center data-[preview=true]:gap-2 data-[preview=true]:bg-slate-800/30 data-[preview=true]:p-3 cursor-pointer rounded-md font-semibold text-white focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 focus-within:ring-offset-gray-900 hover:text-blue-500 data-[preview=true]:hover:bg-slate-800 data-[preview=true]:text-white"
+              data-preview={!!preview}
+            >
+              <span>{!preview ? "Upload a file" : "Change image"}</span>
+              <input
+                id="cover-photo"
+                name="cover-photo"
+                type="file"
+                accept="image/png, image/jpeg, image/gif"
+                className="sr-only"
+                onChange={handleFileChange}
+              />
+              {!!preview && (
+                <PhotoIcon
+                  className="h-5 w-5 text-white"
+                  aria-hidden="true"
+                />
+              )}
+            </label>
+            {!preview && <p className="pl-1">and preview it here</p>}
+          </div>
+          {!preview && (
+            <p className="text-xs leading-5 text-gray-400">
+              PNG, JPG, GIF up to 5MB
+            </p>
+          )}
+        </div>
+      </div>
+    </div> */
 }
