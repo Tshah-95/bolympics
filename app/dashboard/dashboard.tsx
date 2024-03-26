@@ -12,7 +12,10 @@ export default function Dashboard({ events }: { events: Event[] }) {
       <h3 className="font-medium mb-3">Upcoming Events</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5">
         {events.map((event) => (
-          <div className="flex flex-col h-80 w-full justify-center items-stretch border-[1px] bg-slate-700 border-slate-600 rounded-lg overflow-hidden">
+          <div
+            key={event.id}
+            className="flex flex-col h-80 w-full justify-center items-stretch border-[1px] bg-slate-700 border-slate-600 rounded-lg overflow-hidden"
+          >
             <div className="flex flex-1 justify-between bg-slate-500 items-center px-3">
               <button className="p-2 bg-red-500 shadow-sm rounded-md">
                 <TrashIcon className="w-5 h-5 cursor-pointer" />
