@@ -39,7 +39,6 @@ export default function CreateEvent() {
       >
         <div className="flex flex-col items-stretch gap-8">
           <div className="flex flex-col justify-center items-center gap-2 md:gap-4">
-            <PencilSquareIcon className="w-16 h-16 md:w-20 md:h-20" />
             <h1 className="w-full text-center mb-2 md:mb-4 p-2 font-display font-black text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-br from-blue-100 to-blue-400 from-50% to-100%">
               enter the basics
             </h1>

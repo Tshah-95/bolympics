@@ -17,9 +17,8 @@ export default function Dashboard({ events }: { events: Event[] }) {
         {events.map((event) => (
           <div
             key={event.id}
-            className="flex flex-col h-80 w-full justify-center items-stretch shadow-lg border-[1px] bg-slate-700 border-slate-600 hover:shadow-2xl hover:scale-[1.01] rounded-lg overflow-hidden"
           >
-            <div className="flex flex-1 justify-between bg-slate-500 items-center px-3">
+            <div className="flex flex-1 justify-between bg-slate-600 items-center px-3">
               <button
                 className="p-2 bg-red-600 shadow-sm rounded-md"
                 onClick={() =>
@@ -35,7 +34,7 @@ export default function Dashboard({ events }: { events: Event[] }) {
                 <ArrowTopRightOnSquareIcon className="w-6 h-6 cursor-pointer text-white" />
               </button>
             </div>
-            <div className="flex flex-2 bg-gradient-to-b from-slate-500 to-slate-700 from-60% to-100% relative">
+            <div className="flex flex-2 bg-gradient-to-b from-slate-600 to-slate-700 relative">
               <Image
                 src={
                   event.photoUrl ??
@@ -59,7 +58,7 @@ export default function Dashboard({ events }: { events: Event[] }) {
           </div>
         ))}
         <Link href="/event/create" passHref>
-          <button className="flex flex-col h-80 w-full justify-center items-stretch border-[1px] bg-slate-700 border-slate-600 rounded-lg overflow-hidden">
+          <button className="flex flex-col h-80 w-full justify-center items-stretch bg-slate-700 hover:scale-[1.01] active:scale-[.99] rounded-lg overflow-hidden">
             <PlusIcon className=" w-24 h-24 md:w-32 md:h-32 m-auto text-white" />
           </button>
         </Link>
