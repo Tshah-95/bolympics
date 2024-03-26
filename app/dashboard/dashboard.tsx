@@ -17,6 +17,7 @@ export default function Dashboard({ events }: { events: Event[] }) {
         {events.map((event) => (
           <div
             key={event.id}
+            className="flex flex-col h-80 w-full justify-center items-stretch shadow-lg bg-slate-700 hover:shadow-2xl hover:scale-[1.01] rounded-lg overflow-hidden"
           >
             <div className="flex flex-1 justify-between bg-slate-600 items-center px-3">
               <button
