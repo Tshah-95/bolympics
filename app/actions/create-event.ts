@@ -3,6 +3,7 @@
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import prisma from "@/lib/prisma";
 import { v4 as uuidv4 } from "uuid";
+import { permanentRedirect } from "next/navigation";
 
 const client = new S3Client({});
 
@@ -43,11 +44,11 @@ export const createEvent = async (formData: FormData) => {
     databaseEntry.photoUrl = `https://bolympics-image-store-prod.s3.amazonaws.com/${databaseEntry.photoKey}`;
 
     client.send(command);
-
-    const event = await prisma?.event.create({
-      data: databaseEntry,
-    });
-
-    return event;
   }
+
+  await prisma?.event.create({
+    data: databaseEntry,
+  });
+
+  permanentRedirect("/dashboard");
 };

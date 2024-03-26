@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import Nav from "./components/nav";
 import { SessionWrapper } from "../lib/wrappers/session";
 import "react-datepicker/dist/react-datepicker.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "bolympics",
@@ -34,6 +35,7 @@ export default function RootLayout({
             {children}
           </main>
         </SessionWrapper>
+        <Analytics />
       </body>
     </html>
   );

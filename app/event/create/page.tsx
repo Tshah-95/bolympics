@@ -7,8 +7,8 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import Autocomplete from "react-google-autocomplete";
-import { AuthWrapper } from "@/lib/wrappers/authenticated";
 import { useSession } from "next-auth/react";
+import { AuthWrapper } from "@/lib/wrappers/authenticated";
 
 export default function CreateEvent() {
   const [value, setValue] = useState<Date>(new Date());
@@ -180,7 +180,12 @@ export default function CreateEvent() {
             </div>
           </div>
         </div>
-        <input type="hidden" name="user-id" value={data?.user.id} />
+        <input
+          type="hidden"
+          id="user-id"
+          name="user-id"
+          value={data?.user.id}
+        />
 
         <div className="mt-6 flex items-center justify-end gap-x-2">
           <button
