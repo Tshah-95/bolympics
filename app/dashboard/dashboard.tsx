@@ -3,8 +3,11 @@
 import { MapPinIcon, ClockIcon, TrashIcon } from "@heroicons/react/24/outline";
 import { Event } from "@prisma/client";
 import Image from "next/image";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { ArrowTopRightOnSquareIcon, PlusIcon } from "@heroicons/react/24/solid";
 import { AddressLink } from "../components/address-link";
+import Link from "next/link";
+import { deleteEvent } from "./actions";
+import { mutate } from "swr";
 
 export default function Dashboard({ events }: { events: Event[] }) {
   return (
@@ -17,7 +20,12 @@ export default function Dashboard({ events }: { events: Event[] }) {
             className="flex flex-col h-80 w-full justify-center items-stretch border-[1px] bg-slate-700 border-slate-600 rounded-lg overflow-hidden"
           >
             <div className="flex flex-1 justify-between bg-slate-500 items-center px-3">
-              <button className="p-2 bg-red-500 shadow-sm rounded-md">
+              <button
+                className="p-2 bg-red-600 shadow-sm rounded-md"
+                onClick={() =>
+                  deleteEvent(event.id).then(() => mutate("events"))
+                }
+              >
                 <TrashIcon className="w-5 h-5 cursor-pointer" />
               </button>
               <h2 className="text-2xl flex-1 text-center font-display overflow-ellipsis">
@@ -50,6 +58,11 @@ export default function Dashboard({ events }: { events: Event[] }) {
             </div>
           </div>
         ))}
+        <Link href="/event/create" passHref>
+          <button className="flex flex-col h-80 w-full justify-center items-stretch border-[1px] bg-slate-700 border-slate-600 rounded-lg overflow-hidden">
+            <PlusIcon className=" w-24 h-24 md:w-32 md:h-32 m-auto text-white" />
+          </button>
+        </Link>
       </div>
     </div>
   );

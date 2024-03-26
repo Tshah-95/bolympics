@@ -20,3 +20,11 @@ export const getEvents = async () => {
 
   return events;
 };
+
+export const deleteEvent = async (eventId: string) => {
+  return await prisma?.event.delete({
+    where: {
+      id: eventId,
+    },
+  });
+};
