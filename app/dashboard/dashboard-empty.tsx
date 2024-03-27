@@ -11,7 +11,7 @@ export default function DashboardEmpty() {
         className="flex animate-slide-down-fade max-w-5xl w-full flex-col data-[empty=true]:flex-1 items-center justify-center"
         data-empty={true}
       >
-        <div className="flex flex-col w-full justify-center items-center border-2 bg-slate-700 border-slate-600 py-10 md:py-16 rounded-lg">
+        <div className="flex flex-col w-full justify-center items-center border-2 bg-slate-800 border-slate-600 py-10 md:py-16 rounded-lg">
           <CalendarDaysIcon className="w-16 h-16 md:w-24 md:h-24 mb-8 md:mb-12" />
           <h1 className="flex flex-col items-center font-display text-center bg-gradient-to-br from-blue-100 to-blue-400 from-50% to-100% bg-clip-text text-transparent text-5xl font-bold drop-shadow-xl sm:text-6xl md:text-7xl md:leading-[5rem]">
             <p>make your</p>

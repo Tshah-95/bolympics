@@ -18,7 +18,7 @@ export default function NavBar({ session }: { session: Session | null }) {
   return (
     <>
       <div
-        className="fixed top-0 w-full flex animate-slide-down-fade-2 justify-between items-center px-5 md:px-10 data-[scrolled=true]:bg-slate-700/30 data-[scrolled=true]:backdrop-blur-xl data-[scrolled=false]:bg-slate-600/0 z-30 transition-all"
+        className="fixed top-0 w-full flex animate-slide-down-fade-2 justify-between items-center px-5 md:px-10 data-[scrolled=true]:bg-slate-800/30 data-[scrolled=true]:backdrop-blur-xl data-[scrolled=false]:bg-slate-700/0 z-30 transition-all"
         data-scrolled={scrolled}
       >
         <div className="flex justify-center items-center h-16">

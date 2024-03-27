@@ -26,12 +26,12 @@ export default function Dashboard({ events }: { events: EventWithUser[] }) {
         {events.map((event) => (
           <div
             key={event.id}
-            className="flex flex-col h-80 w-full justify-center items-stretch shadow-lg bg-slate-700 rounded-lg overflow-hidden"
+            className="flex flex-col h-96 w-full justify-center items-stretch shadow-lg bg-gradient-to-br from-slate-900 to-slate-700 rounded-lg overflow-hidden"
           >
             <div className="flex justify-between items-center px-5 flex-2 bg-blue-300 text-slate-700 gap-5">
               <div className="flex gap-3 items-center">
                 <h2
-                  className="font-display font-bold text-3xl bg-slate-700 text-blue-300 p-3 rounded-md"
+                  className="font-display font-bold text-3xl bg-slate-900 text-blue-300 p-3 rounded-md"
                   data-tooltip-id="initials"
                   data-tooltip-content={event.user?.name ?? "Unknown"}
                 >
@@ -46,7 +46,7 @@ export default function Dashboard({ events }: { events: EventWithUser[] }) {
               </button>
             </div>
             <div className="flex flex-3 items-stretch">
-              <div className="flex flex-col gap-5 flex-1 p-5">
+              <div className="flex flex-col justify-around items-center text-center gap-3 flex-1 p-5">
                 <div className="flex items-center gap-3 min-w-fit">
                   <ClockIcon
                     className="w-5 h-5"
@@ -55,9 +55,9 @@ export default function Dashboard({ events }: { events: EventWithUser[] }) {
                   />
                   <p>{event.time}</p>
                 </div>
-                <div className="flex items-center gap-3 underline underline-offset-2">
+                <div className="flex items-stretch gap-3 underline underline-offset-2">
                   <MapPinIcon
-                    className="w-5 h-5"
+                    className="h-6 w-6 aspect-square"
                     data-tooltip-id="address"
                     data-tooltip-content="Event Location"
                   />
@@ -79,7 +79,7 @@ export default function Dashboard({ events }: { events: EventWithUser[] }) {
           </div>
         ))}
         <Link href="/event/create" passHref>
-          <button className="flex flex-col h-80 w-full justify-center items-stretch bg-slate-700 hover:scale-[1.01] hover:shadow-2xl active:scale-[.99] rounded-lg overflow-hidden">
+          <button className="flex flex-col h-96 w-full justify-center items-stretch shadow-lg bg-slate-800 rounded-lg overflow-hidden">
             <PlusIcon className=" w-24 h-24 md:w-32 md:h-32 m-auto text-white" />
           </button>
         </Link>
@@ -98,6 +98,7 @@ const getInitials = (name: string) => {
 
 const tooltipStyles = {
   backgroundColor: "rgb(100, 116, 139)",
+  opacity: 0.95,
 };
 
 const Tooltips = () => {

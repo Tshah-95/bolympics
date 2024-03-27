@@ -3,14 +3,14 @@ import Link from "next/link";
 const steps = [
   { name: "Invite Guests", href: "#", status: "complete", number: 1 },
   { name: "Build Event", href: "#", status: "current", number: 2 },
-  { name: "Organize Day", href: "#", status: "complete", number: 3 },
+  { name: "Organize Day", href: "#", status: "incomplete", number: 3 },
 ];
 
 export default function StepDots({}) {
   const currentStep = steps.find((step) => step.status === "current");
   return (
     <nav
-      className="flex items-center justify-center text-white bg-slate-500 px-5 py-3 rounded-md"
+      className="flex items-center justify-center text-white bg-slate-600 px-5 py-3 rounded-md"
       aria-label="Progress"
     >
       <p className="text-sm font-medium select-none">
@@ -37,7 +37,7 @@ export default function StepDots({}) {
                   <span className="h-full w-full rounded-full bg-white" />
                 </span>
                 <span
-                  className="relative block h-3 w-3 rounded-full bg-red-300 hover:bg-white"
+                  className="relative block h-2.5 w-2.5 rounded-full bg-red-300 hover:bg-white"
                   aria-hidden="true"
                 />
                 <span className="sr-only">{step.name}</span>
@@ -45,7 +45,7 @@ export default function StepDots({}) {
             ) : (
               <Link
                 href={step.href}
-                className="block h-2.5 w-2.5 rounded-full bg-slate-700 hover:bg-slate-400"
+                className="block h-2.5 w-2.5 rounded-full bg-slate-800 hover:bg-slate-500"
               >
                 <span className="sr-only">{step.name}</span>
               </Link>

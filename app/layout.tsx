@@ -24,7 +24,7 @@ export default function RootLayout({
         className={cx(
           sfPro.variable,
           inter.variable,
-          "bg-slate-800 text-white flex flex-col items-center pt-16 min-h-[100vh] w-full"
+          "bg-[url('/y-so-serious.png')] text-white flex flex-col items-center pt-16 min-h-[100vh] w-full"
         )}
       >
         <Suspense fallback="">

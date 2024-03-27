@@ -57,7 +57,7 @@ export default function CreateEvent() {
               id="event-name"
               placeholder="Something fun"
               required
-              className="block mt-2 w-full rounded-md border-0 p-3 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
+              className="block mt-2 w-full rounded-md border-0 p-3 bg-gray-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col items-stretch">
@@ -77,7 +77,7 @@ export default function CreateEvent() {
               onChange={(date: Date) => setValue(date)}
               dateFormat="Pp"
               required
-              className="block w-full mt-2 max-w-none rounded-md border-0 p-3 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
+              className="block w-full mt-2 max-w-none rounded-md border-0 p-3 bg-gray-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
             />
           </div>
           <div className="w-full flex flex-col items-stretch">
@@ -95,7 +95,7 @@ export default function CreateEvent() {
               id="location"
               name="location"
               required
-              className="block mt-2 w-full rounded-md border-0 p-3 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
+              className="block mt-2 w-full rounded-md border-0 p-3 bg-gray-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
             />
           </div>
           <div className="w-full">
@@ -113,7 +113,7 @@ export default function CreateEvent() {
               name="event-details"
               rows={3}
               placeholder="Write a few sentences about your event."
-              className="block mt-2 w-full rounded-md border-0 p-3 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
+              className="block mt-2 w-full rounded-md border-0 p-3 bg-gray-800 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
               defaultValue={""}
             />
           </div>
@@ -128,14 +128,14 @@ export default function CreateEvent() {
         <div className="mt-6 flex items-center justify-end gap-x-2">
           <button
             type="button"
-            className="text-sm font-semibold leading-6 px-4 py-3 rounded-md hover:bg-slate-700 text-white"
+            className="text-sm font-semibold leading-6 px-4 py-3 rounded-md hover:bg-gray-800 text-white"
             onClick={() => router.back()}
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="rounded-md bg-gradient-to-br from-red-500 to-orange-400 px-4 py-3 text-sm font-semibold shadow-sm hover:bg-slate-500"
+            className="rounded-md bg-gradient-to-br from-red-500 to-orange-400 px-4 py-3 text-sm font-semibold shadow-sm hover:bg-slate-600"
           >
             Create
           </button>
@@ -178,7 +178,7 @@ export default function CreateEvent() {
           >
             <label
               htmlFor="cover-photo"
-              className="relative flex items-center data-[preview=true]:gap-2 data-[preview=true]:bg-slate-800/30 data-[preview=true]:p-3 cursor-pointer rounded-md font-semibold text-white focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 focus-within:ring-offset-gray-900 hover:text-blue-500 data-[preview=true]:hover:bg-slate-800 data-[preview=true]:text-white"
+              className="relative flex items-center data-[preview=true]:gap-2 data-[preview=true]:bg-gray-800/30 data-[preview=true]:p-3 cursor-pointer rounded-md font-semibold text-white focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-600 focus-within:ring-offset-2 focus-within:ring-offset-gray-900 hover:text-blue-500 data-[preview=true]:hover:bg-gray-800 data-[preview=true]:text-white"
               data-preview={!!preview}
             >
               <span>{!preview ? "Upload a file" : "Change image"}</span>
