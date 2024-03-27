@@ -7,11 +7,7 @@ export const AddressLink = ({ address }: { address: string }) => {
   const fullUrl = `${baseUrl}${encodedAddress}`;
 
   return (
-    <Link
-      target="_blank"
-      href={fullUrl}
-      className="text-blue-400 hover:brightness-90"
-    >
+    <Link target="_blank" href={fullUrl} className="hover:brightness-90">
       {address}
     </Link>
   );

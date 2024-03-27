@@ -21,7 +21,7 @@ export default function NavBar({ session }: { session: Session | null }) {
         className="fixed top-0 w-full flex animate-slide-down-fade-2 justify-between items-center px-5 md:px-10 data-[scrolled=true]:bg-slate-700/30 data-[scrolled=true]:backdrop-blur-xl data-[scrolled=false]:bg-slate-600/0 z-30 transition-all"
         data-scrolled={scrolled}
       >
-        <div className="flex h-16 items-center justify-center">
+        <div className="flex justify-center items-center h-16">
           <Link
             href="/dashboard"
             className="flex items-center font-display text-2xl text-white hover:brightness-90"

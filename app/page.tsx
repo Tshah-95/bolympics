@@ -37,10 +37,10 @@ export default function Splash() {
   return (
     <>
       <div className="flex animate-slide-down-fade w-full p-3 pt-20 pb-10 shadow-md-white items-center justify-between text-sm rounded-lg bg-gradient-to-br from-red-500 to-orange-400">
-        <div className="flex flex-col w-full justify-center items-center">
+        <div className="flex flex-col justify-center items-center w-full">
           <h1 className="flex flex-col items-center font-display text-center bg-gradient-to-br from-slate-900 to-slate-700 from-50% to-100% bg-clip-text text-transparent  text-5xl font-bold drop-shadow-sm sm:text-6xl md:text-7xl md:leading-[5rem]">
             <p>beer olympics</p>
-            <p className="flex justify-center gap-3 sm:gap-4 md:gap-5">
+            <p className="flex justify-center items-center gap-3 sm:gap-4 md:gap-5">
               made
               <motion.span
                 className="text-white w-[2em] text-left"
