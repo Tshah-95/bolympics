@@ -23,7 +23,7 @@ export default function StepDots({}) {
             {step.status === "complete" ? (
               <Link
                 href={step.href}
-                className="block h-3 w-3 rounded-full bg-red-300 hover:bg-white"
+                className="block h-3 w-3 rounded-full bg-red-600 hover:bg-white"
               >
                 <span className="sr-only">{step.name}</span>
               </Link>
@@ -37,7 +37,7 @@ export default function StepDots({}) {
                   <span className="h-full w-full rounded-full bg-white" />
                 </span>
                 <span
-                  className="relative block h-2.5 w-2.5 rounded-full bg-red-300 hover:bg-white"
+                  className="relative block h-2.5 w-2.5 rounded-full bg-red-600 hover:bg-white"
                   aria-hidden="true"
                 />
                 <span className="sr-only">{step.name}</span>
@@ -45,7 +45,7 @@ export default function StepDots({}) {
             ) : (
               <Link
                 href={step.href}
-                className="block h-2.5 w-2.5 rounded-full bg-slate-800 hover:bg-slate-500"
+                className="block h-2.5 w-2.5 rounded-full bg-slate-800 hover:bg-white"
               >
                 <span className="sr-only">{step.name}</span>
               </Link>

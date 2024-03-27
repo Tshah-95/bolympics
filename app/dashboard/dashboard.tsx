@@ -26,7 +26,7 @@ export default function Dashboard({ events }: { events: EventWithUser[] }) {
         {events.map((event) => (
           <div
             key={event.id}
-            className="flex flex-col h-96 w-full justify-center items-stretch shadow-lg bg-gradient-to-br from-slate-900 to-slate-700 rounded-lg overflow-hidden"
+            className="flex flex-col h-80 w-full justify-center items-stretch shadow-lg bg-gradient-to-br from-slate-900 to-slate-700 rounded-lg overflow-hidden"
           >
             <div className="flex justify-between items-center px-5 flex-2 bg-blue-300 text-slate-700 gap-5">
               <div className="flex gap-3 items-center">
@@ -73,13 +73,10 @@ export default function Dashboard({ events }: { events: EventWithUser[] }) {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center items-center p-5">
-              <StepDots />
-            </div>
           </div>
         ))}
         <Link href="/event/create" passHref>
-          <button className="flex flex-col h-96 w-full justify-center items-stretch shadow-lg bg-slate-800 rounded-lg overflow-hidden">
+          <button className="flex flex-col h-96 w-full justify-center items-stretch shadow-lg bg-gradient-to-br from-slate-900 to-slate-700 rounded-lg overflow-hidden">
             <PlusIcon className=" w-24 h-24 md:w-32 md:h-32 m-auto text-white" />
           </button>
         </Link>
